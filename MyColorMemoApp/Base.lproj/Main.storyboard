@@ -23,15 +23,62 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z6R-T2-MbM">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z6R-T2-MbM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7mz-XP-sYw"/>
+                            <constraint firstItem="Z6R-T2-MbM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Knp-oF-h9P"/>
+                            <constraint firstItem="Z6R-T2-MbM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="aC4-Mx-Qg8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z6R-T2-MbM" secondAttribute="trailing" id="ene-Kd-fyc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="11t-Y4-m1U"/>
+                    <connections>
+                        <outlet property="tableView" destination="Z6R-T2-MbM" id="ZEY-Dz-nE0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+        </scene>
+        <!--Memo Detail View Controller-->
+        <scene sceneID="Pyi-JJ-eKE">
+            <objects>
+                <viewController storyboardIdentifier="MemoDetailViewController" id="3XZ-8p-8aS" customClass="MemoDetailViewController" customModule="MyColorMemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MKg-Is-xSy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eZN-QW-t2r">
+                                <rect key="frame" x="10" y="69" width="373" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NFt-Ge-Z6U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NFt-Ge-Z6U" firstAttribute="trailing" secondItem="eZN-QW-t2r" secondAttribute="trailing" constant="10" id="46x-0I-biW"/>
+                            <constraint firstItem="eZN-QW-t2r" firstAttribute="leading" secondItem="NFt-Ge-Z6U" secondAttribute="leading" constant="10" id="IL8-qj-zIZ"/>
+                            <constraint firstItem="eZN-QW-t2r" firstAttribute="top" secondItem="NFt-Ge-Z6U" secondAttribute="top" constant="10" id="WJP-uX-mHf"/>
+                            <constraint firstItem="eZN-QW-t2r" firstAttribute="bottom" secondItem="NFt-Ge-Z6U" secondAttribute="bottom" constant="10" id="hGS-nN-4wD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="eZN-QW-t2r" id="sr3-nD-xPY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bpH-5q-CUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1843.5114503816794" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="s9b-Wp-mRf">
@@ -53,6 +100,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
